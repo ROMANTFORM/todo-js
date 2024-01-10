@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./src/images/logo4.ico">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Todo-list</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" id="homeLink">
+                <img src="./src/images/logo4.ico" alt="logo" height="50">
+                ToDo
+            </a>
+        </nav>
+        <section id="searchSection">
+            <label for="search" id="searchLabel">Search</label>
+            <input type="text" id="search" placeholder="">
+            <img src="./src/images/search-img.png" alt="search" id="searchIcon">
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <h2>My Tasks</h2>
+        </section>
+        <section class="taskListClass" id="taskList">
+            <div class="task" id="addTask">
+                <div class="taskName">
+                    <div class="radio addRadio" id="leftElement"></div>
+                    <input type="text" id="addTaskInput" placeholder="add task...">
+                </div>
+                <div id="options">
+                    <button id="addButton" disabled>Add task</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Done Tasks</h2>
+        </section>
+        <section class="taskListClass" id="doneTaskList"></section>
+    </main>
+
+
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

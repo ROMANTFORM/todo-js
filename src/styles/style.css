@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+}
+body{
+    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #202020;
+}
+header nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 48px;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+header #searchSection{
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+}
+header #searchSection img[alt="search"]{
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+}
+header #searchSection img[alt="search"].hidden{
+    display: none;
+}
+header #searchSection label[for="search"]{
+    position: absolute;
+    right: 293px;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 7px 0 0 7px;
+    opacity: 0;
+}
+header #searchSection label[for="search"].hovered{
+    opacity: 1;
+    transition: .3s linear;
+}
+header #searchSection input:focus{
+    outline: none;
+}
+header #searchSection input{
+    height: 41px;
+    width: 250px;
+    border-radius: 0 7px 7px 0;
+    /* border: 0 solid darkgray; */
+    padding-left: 40px;
+    font-size: 18px;
+    transition: .3s linear;
+}
+/* header #searchSection input:hover{
+    transition: .3s linear;
+    border: 2px solid darkgray;
+} */
+
+main{
+    padding: 20px;
+}
+main .taskListClass{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+main .task{
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 10%), 0, 1.6px, 3.6px rgba(0, 0, 0, 10%);
+    margin-bottom: 18px;
+}
+main .task.hidden{
+    display: none;
+}
+main .task .radio{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.addRadio{
+background-image: url('../images/add-btn.png');
+}
+main .task .radio img{
+    opacity: 0;
+    transition: .3s linear;
+}
+main .task .radio img:hover{
+    opacity: 1;
+    transition: .3s linear;
+}
+main .task#addTask #options{
+    padding: 0 15px;
+    background-color: darkgray;
+    height: 50px;
+    margin-top: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .task#addTask #options #addButton{
+    background-color: #f1f1f1;
+    border-radius: 0;
+    border: 1px solid black;
+    font-size: 14px;
+    padding: 8px 10px;
+    cursor: not-allowed;
+    color: gray;
+}
+main .task#addTask #options #addButton.valid{
+    color: #2564cf;
+    cursor: pointer;
+}
+main .task .taskName{
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+main .task .taskName #leftElement{
+    margin-right: 10px;
+}
+main .task #addTaskInput{
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+}
+main .task #addTaskInput:focus{
+    outline: none;
+}
+main #doneTaskList .task .radio{
+    border: 2px solid green;
+
+}
+main #doneTaskList .task .radio img{
+    opacity: 1;
+}
+main #doneTaskList .task .taskName{
+    text-decoration: line-through;
+}
+.radioCheck{
+    width: 40px;
+    height: 40px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
